@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Inicio } from '../pages/inicio/inicio';
-import { Listado } from '../pages/listado/listado';
-import { Info } from '../pages/info/info';
+import { Inicio } from '../inicio/inicio';
+import { Listado } from '../listado/listado';
+import { Info } from '../info/info';
  
 /**
  * Generated class for the MisTabs tabs.
