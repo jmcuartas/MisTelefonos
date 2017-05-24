@@ -3,7 +3,11 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//Pages
 import { MisTabs } from '../pages/mis-tabs/mis-tabs';
+
+//Providers
+import { GlobalFunctions } from '../providers/global-functions';
 
 @Component({
   templateUrl: 'app.html'
