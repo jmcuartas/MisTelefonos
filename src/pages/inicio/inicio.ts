@@ -3,7 +3,6 @@ import { NavController, NavParams, Loading } from 'ionic-angular';
 
 
 //Providers
-//Providers
 import { GlobalFunctions } from '../../providers/global-functions';
 
 /**

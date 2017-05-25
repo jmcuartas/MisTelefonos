@@ -1,0 +1,50 @@
+<!--
+  Generated template for the ModalDetalleContacto page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>    
+    <ion-buttons left>
+      <button ion-button icon-only (click)="cerrarModal()">
+        <span ion-text color="primary" showWhen="ios">Contactos</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>    
+    <ion-title text-center>Detalles</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="editarContacto()">
+        <span ion-text color="primary" showWhen="ios">Editar</span>
+        <ion-icon name="md-hammer" showWhen="android, windows"></ion-icon>        
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    
+       <ion-item>
+          <ion-avatar item-start>
+            <img src="../assets/img/avatar.jpg" />        
+          </ion-avatar>
+          <h2>{{ contacto.name }}</h2>
+           <p>{{ contacto.nickname }}</p>
+           
+        </ion-item>
+        <ion-item>
+          <h2>Email</h2>
+          <P>{{ contacto.email }}</P>           
+        </ion-item>
+        <ion-item *ngFor="let item of contacto['items']">
+          {{ item.type }}
+          <ion-note item-end>
+            {{ item.telephone }}
+          </ion-note>
+        </ion-item>
+</ion-list>
+
+</ion-content>

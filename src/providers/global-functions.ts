@@ -13,13 +13,16 @@ export class GlobalFunctions {
 
   loading: Loading;
   alert: any;
-  popup: any
+  popup: any;
+  Contactos;
 
   constructor(private alertCtrl: AlertController, 
-              private loadingCtrl: LoadingController) {                
+              private loadingCtrl: LoadingController) {   
+                this.Contactos = [];
+                this.inicializaLista();             
   }
 
-
+  /** Metodos Popup */
   public showLoading(text) : Loading {
     this.loading = this.loadingCtrl.create({
       content: text,
@@ -47,4 +50,38 @@ export class GlobalFunctions {
     return this.popup;
   }
 
+
+  /** Metodos de la lista de contactos */
+  inicializaLista(){
+    this.Contactos = [{
+      name:  'Fran',
+      nickname: 'The Crack',
+      email: 'fran@gmail.com',
+      items: [{
+        type: 'Casa',
+        telephone: '321654987'
+        }]
+      },{
+      name:  'Chang',
+      nickname: 'The Police',
+      email: 'chang@gmail.com',
+      items: [{
+        type: 'Movil',
+        telephone: '654987321'
+        }]
+      },{
+      name:  'Pepe',
+      nickname: 'The Frog',
+      email: 'pepe@gmail.com',
+      items: [{
+        type: 'Empresa',
+        telephone: '654321987'
+        }]
+      }
+    ];
+  }
+
+  getListaContactos(): any{
+    return this.Contactos;
+  }
 }
