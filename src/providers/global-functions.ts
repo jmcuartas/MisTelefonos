@@ -15,6 +15,8 @@ export class GlobalFunctions {
   alert: any;
   popup: any;
   Contactos;
+  contacto: any = {name:'', nickname:'', email: '', items:{type:'', telephone:''}};  
+
 
   constructor(private alertCtrl: AlertController, 
               private loadingCtrl: LoadingController) {   
@@ -83,5 +85,10 @@ export class GlobalFunctions {
 
   getListaContactos(): any{
     return this.Contactos;
+  }
+
+
+  addContacto(){
+    
   }
 }
