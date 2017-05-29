@@ -17,6 +17,8 @@ import { GlobalFunctions } from '../../providers/global-functions';
 export class ModalNuevoContacto {
 
   popup;
+  contacto: any = {name:'', nickname:'', email: '', items:[{type:'', telephone:''}]};  
+  
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -33,8 +35,8 @@ export class ModalNuevoContacto {
   }
 
   nuevoContacto(){
-    this.popup = this.gFunction.showPopup("New contact","Not implemented");
-    this.popup.present();
+    this.gFunction.addContacto(this.contacto);
+    this.viewCtrl.dismiss();
   }
 
 }

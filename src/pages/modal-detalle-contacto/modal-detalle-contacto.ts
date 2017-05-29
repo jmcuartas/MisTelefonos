@@ -19,7 +19,7 @@ import { GlobalFunctions } from '../../providers/global-functions';
 export class ModalDetalleContacto {
 
   popup: any;
-  contacto: any = {name:'', nickname:'', email: '', items:{type:'', telephone:''}};  
+  contacto: any = {name:'', nickname:'', email: '', items:[{type:'', telephone:''}]};  
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,

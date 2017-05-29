@@ -23,7 +23,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="detalle-content" padding>
 
   <ion-list>
     
@@ -39,7 +39,7 @@
           <h2>Email</h2>
           <P>{{ contacto.email }}</P>           
         </ion-item>
-        <ion-item *ngFor="let item of contacto['items']">
+        <ion-item *ngFor="let item of contacto.items">
           {{ item.type }}
           <ion-note item-end>
             {{ item.telephone }}

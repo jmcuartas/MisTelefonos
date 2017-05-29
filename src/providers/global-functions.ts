@@ -15,7 +15,7 @@ export class GlobalFunctions {
   alert: any;
   popup: any;
   Contactos;
-  contacto: any = {name:'', nickname:'', email: '', items:{type:'', telephone:''}};  
+  contacto: any = [{name:'', nickname:'', email: '', items:[{type:'', telephone:''}]}];  
 
 
   constructor(private alertCtrl: AlertController, 
@@ -72,9 +72,9 @@ export class GlobalFunctions {
         telephone: '654987321'
         }]
       },{
-      name:  'Pepe',
-      nickname: 'The Frog',
-      email: 'pepe@gmail.com',
+      name:  'Don Pablo',
+      nickname: 'The Boss',
+      email: 'pablo@gmail.com',
       items: [{
         type: 'Empresa',
         telephone: '654321987'
@@ -88,7 +88,10 @@ export class GlobalFunctions {
   }
 
 
-  addContacto(){
-    
+  addContacto(contacto){
+    if(!this.Contactos.some(x => x === contacto)){
+      this.Contactos.push(contacto);
+    }
   }
+
 }
